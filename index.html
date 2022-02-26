@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DASanti</title>
+	<link rel="icon" type="image/x-icon" href="icons/microchip.svg">
+  <link rel="stylesheet" href="output.css">
+	<script src="node_modules/flowbite/dist/flowbite.js"></script>
+
+</head>
+<body class="text-gray-600 font-sans">
+
+	<div class="grid md:grid-cols-4">
+		<div class="md:col-span-1 md:flex md:justify-end">
+			<nav class="text-right fixed">
+				<div class="flex justify-between items-center">
+					<h1 class="font-bold uppercase p-4 border-b border-gray-100">
+						<a href="/" class="hover:text-gray-700">Diego Santisteban</a>
+					</h1>
+					<div id="burger" class="px-4 cursor-pointer md:hidden" >
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+						</svg>
+					</div>
+				</div>
+				<div class="container">
+					<ul class="text-sm mt-6 hidden md:block" id="menu">
+						<li class="py-1 activated" id="initial_nav">
+							<a href="#projects_section" class="px-4 flex justify-end">
+								<span>Projects</span>
+								<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+								</svg>
+							</a>
+						</li>
+						<li class="py-1">
+							<a href="#curriculum_section" class="px-4 flex justify-end">
+								<span>Curriculum</span>
+								<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+									<path d="M12 14l9-5-9-5-9 5 9 5z" />
+									<path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+								</svg>
+							</a>
+						</li>
+						<li class="py-1">
+							<a href="#" class="px-4 flex justify-end">
+								<span>Contact</span>
+								<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+
+		<main class="px-16 py-6 bg-gray-100 md:col-span-3">
+
+			<section id="projects_section">
+				<header>
+					<h2 class="text-gray-700 text-6xl font-semibold" id="projects_scroll">Projects</h2>
+					<h3 class="text-2xl font-semibold">Developed & co-developed
+					</h3>
+				</header>
+				
+				<div>
+					
+					<h4 class="font-bold mt-6 pb-2 border-b border-gray-200"></h4>
+	
+					<div class="mt-8 grid lg:grid-cols-2 gap-10">
+						<!--card 1-->
+						<div class="card cursor-pointer" onclick="function_open1()">
+							<img src="projects/images/burr2.png" class="w-full h-32 sm:h-48 object-cover">
+							<div class="m-4">
+								<span class="font-bold text-xl">Automated burr detection </span>
+								<span class="block text-gray-500 text-sm tracking-wide">and aluminum profile classification cell</span>
+							</div>
+						</div>
+	
+						<!--modal 1-->
+						<div class="fixed z-10 hidden inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full p-3 md:p-14" id="modal1">
+								<div class="text-gray-600 body-font bg-white h-full rounded-md shadow-md" id="window1">
+	
+									<div class="absolute top-16 right-16">
+										<button onclick="function_close1()" class="transition ease-out duration-500 hover:bg-red-300 hover:text-white text-red-300 border-red-300 md:border-2 rounded-full py-2 px-3 uppercase text-xs font-bold cursor-pointer tracking-wider" >x</button>
+									</div>
+	
+									<div class="flex md:flex-row flex-col items-center h-full">
+										<div class="flex flex-col h-full w-3/5 p-5">
+										<div class="h-1/6">
+											<div class="flex flex-row items-center justify-center h-full place-content-end gap-0">
+												<div class="h-full w-auto p-2 ">
+													<img src="projects/images/burr2.png" alt="Classification cell with camera arrays, profile trays, and robotic arm" class="object-cover object-center h-full border-gray-200 border-solid border-2 rounded-sm cursor-pointer hover:opacity-75 transform hover:scale-110 focus:scale-110 transition ease-out duration-150" onclick="function_expand1(this);">
+												</div>
+												<div class="h-full w-auto p-2 ">
+													<img src="projects/images/burr1.JPG" alt="Different filters used on the metal profile images" class="object-cover object-center h-full border-gray-200 border-solid border-2 rounded-sm cursor-pointer hover:opacity-75 transform hover:scale-110 focus:scale-110 transition ease-out duration-150"onclick="function_expand1(this);">
+												</div>
+												<div class="h-full w-auto p-2 ">
+													<img src="projects/images/burr3.png" alt="Preprogrammed paths of the robotic arm" class="object-cover object-center h-full border-gray-200 border-solid border-2 rounded-sm cursor-pointer hover:opacity-75 transform hover:scale-110 focus:scale-110 transition ease-out duration-150" onclick="function_expand1(this);">
+												</div>
+												<div class="h-full w-auto p-2 ">
+													<img src="projects/images/burr4.png" alt="Early version of the Machine Learning Algorythm developed in Orange" class="object-cover object-center h-full border-gray-200 border-solid border-2 rounded-sm cursor-pointer hover:opacity-75 transform hover:scale-110 focus:scale-110 transition ease-out duration-150" onclick="function_expand1(this);">
+												</div>
+												<!-- <div class="h-full w-auto p-2 ">
+													<img src="projects/images/burr3.png" class="object-cover object-center h-full border-gray-200 border-solid border-2 rounded-sm cursor-pointer hover:opacity-75 transform hover:scale-110 focus:scale-110 transition ease-out duration-150" onclick="function_expand1(this);">
+												</div>
+												<div class="h-full w-auto p-2 ">
+													<img src="projects/images/burr4.png" class="object-cover object-center h-full border-gray-200 border-solid border-2 rounded-sm cursor-pointer hover:opacity-75 transform hover:scale-110 focus:scale-110 transition ease-out duration-150" onclick="function_expand1(this);">
+												</div>
+												<div class="h-full w-auto p-2 ">
+													<img src="projects/images/burr3.png" class="object-cover object-center h-full border-gray-200 border-solid border-2 rounded-sm cursor-pointer hover:opacity-75 transform hover:scale-110 focus:scale-110 transition ease-out duration-150" onclick="function_expand1(this);">
+												</div> -->
+											</div>
+										</div>
+										<div class="flex flex-row justify-center items-center h-4/6 md:p-2">
+											<img class="h-full" src="projects/images/burr2.png" id="expandedImg1">
+										</div>
+										<div class="flex flex-col items-center justify-center h-1/6 p-3">
+											<h4 id="imgtext1">Classification cell with camera arrays, profile trays, and robotic arm</h4>
+											<a href="projects/files/f_burr4.pdf" target="_blank">
+												<button class="px-8 py-2 m-3 transition ease-out duration-500 hover:bg-red-300 hover:text-white text-red-300 border-red-300 md:border-2 rounded-full uppercase text-xs font-bold cursor-pointer tracking-wider">
+													Open project report</button>
+											</a>
+										</div>
+									</div>
+									<div class="border-r border-gray-300" style="height: 550px;"></div>
+										<div class="w-2/5 pt-10 pb-24 pl-12 pr-12 h-full">
+											<div class="w-full h-full overflow-auto ">
+												<h1 class="title-font sm:text-xl text-2xl mb-4 font-semibold uppercase text-gray-900">Automated burr detection and aluminum profile classification cell
+												</h1>
+												<h2 class="title-font sm:text-2xl text-xl mb-4 font-medium text-gray-900"></h2>
+												<p class=""> Worked on the development of a prototype cell that uses image recognition, machine learning, and a robotic arm to handle, analyse, and classify aluminium profiles by detecting the presence of burrs around drilled holes. Image acquisition and pre-processing was carried out using python (OpenCV) and image recognition was implemented using a machine learning algorithm set-up in Orange. Since access to the robotic arm was limited, a simulation of the physical process was developed using Robot Studio. This whole project was achieved closely following an AGM (Agile Project Management) approach and was graded according to its principles, as well as other mechatronic design fundamentals.</p>
+											</div>
+											<div class="">
+												<h4 class="pb-2">Developed skills:</h4>
+												<div data-tooltip-target="tooltip-python" class="inline-block bg-gray-200 text-gray-500 text-xs uppercase font-bold rounded-full p-2">
+													Python
+												</div>
+												<div id="tooltip-python" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+													Python
+													<div class="tooltip-arrow" data-popper-arrow></div>
+												</div>
+		
+												<div data-tooltip-target="tooltip-orange" class="inline-block bg-gray-200 text-gray-500 text-xs uppercase font-bold rounded-full p-2">
+													Orange
+												</div>
+												<div id="tooltip-orange" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+													Orange
+													<div class="tooltip-arrow" data-popper-arrow></div>
+												</div>
+		
+												<div data-tooltip-target="tooltip-open" class="inline-block bg-gray-200 text-gray-500 text-xs uppercase font-bold rounded-full p-2">
+													OpenCV
+												</div>
+												<div id="tooltip-open" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+													OpenCV
+													<div class="tooltip-arrow" data-popper-arrow></div>
+												</div>
+		
+												<div data-tooltip-target="tooltip-cv" class="inline-block bg-gray-200 text-gray-500 text-xs uppercase font-bold rounded-full p-2">
+													C.V
+												</div>
+												<div id="tooltip-cv" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+													Computer Vision
+													<div class="tooltip-arrow" data-popper-arrow></div>
+												</div>
+		
+												<div data-tooltip-target="tooltip-ip" class="inline-block bg-gray-200 text-gray-500 text-xs uppercase font-bold rounded-full p-2">
+													I.P
+												</div>
+												<div id="tooltip-ip" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+													Image Processing
+													<div class="tooltip-arrow" data-popper-arrow></div>
+												</div>
+		
+												<div data-tooltip-target="tooltip-apm" class="inline-block bg-gray-200 text-gray-500 text-xs uppercase font-bold rounded-full p-2">
+													APM
+												</div>
+												<div id="tooltip-apm" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+													Agile Project Management
+													<div class="tooltip-arrow" data-popper-arrow></div>
+												</div>
+		
+												<div data-tooltip-target="tooltip-ml" class="inline-block bg-gray-200 text-gray-500 text-xs uppercase font-bold rounded-full p-2">
+													M.L
+												</div>
+												<div id="tooltip-ml" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+													Machine Learning
+													<div class="tooltip-arrow" data-popper-arrow></div>
+												</div>
+		
+												<div data-tooltip-target="tooltip-ic" class="inline-block bg-gray-200 text-gray-500 text-xs uppercase font-bold rounded-full p-2">
+													I.C
+												</div>
+												<div id="tooltip-ic" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+													Image Classification 
+													<div class="tooltip-arrow" data-popper-arrow></div>
+												</div>
+											</div>
+										</div>
+								</div>
+							</div>
+						</div>
+	
+						<!--card 2-->
+						<div class="card cursor-pointer" onclick="function_open2()">
+							<img src="projects/images/cnc5.JPG" class="w-full h-32 sm:h-48 object-cover">
+							<div class="m-4">
+								<span class="font-bold text-xl">Micro CNC lathe </span>
+								<span class="block text-gray-500 text-sm tracking-wide">CAD/CAM design and parameter research</span>
+							</div>
+						</div>
+	
+						<!--modal 2-->
+						<div class="fixed z-10 hidden inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full p-3 md:p-14" id="modal2">
+								<div class="text-gray-600 body-font bg-white h-full rounded-md shadow-md">
+	
+									<div class="absolute top-16 right-16">
+										<button onclick="function_close2()" class="transition ease-out duration-500 hover:bg-red-300 hover:text-white text-red-300 border-red-300 md:border-2 rounded-full py-2 px-3 uppercase text-xs font-bold cursor-pointer tracking-wider" >x</button>
+									</div>
+	
+									<div class="flex md:flex-row flex-col items-center h-full">
+										<div class="flex flex-col h-full w-3/5 p-5">
+										<div class="h-1/6">
+											<div class="flex flex-row items-center justify-center h-full place-content-end gap-0">
+												<div class="h-full w-auto p-2 ">
+													<img src="projects/images/cnc5.JPG" alt="Isometric view of the CAD model" class="object-cover object-center h-full border-gray-200 border-solid border-2 rounded-sm cursor-pointer hover:opacity-75 transform hover:scale-110 focus:scale-110 transition ease-out duration-150" onclick="function_expand2(this);">
+												</div>
+												<div class="h-full w-auto p-2 ">
+													<img src="projects/images/cnc6.JPG" alt="Isometric view of the CAD model" class="object-cover object-center h-full border-gray-200 border-solid border-2 rounded-sm cursor-pointer hover:opacity-75 transform hover:scale-110 focus:scale-110 transition ease-out duration-150"onclick="function_expand2(this);">
+												</div>
+												<div class="h-full w-auto p-2 ">
+													<img src="projects/images/cnc7.JPG" alt="Top view of the CAD model" class="object-cover object-center h-full border-gray-200 border-solid border-2 rounded-sm cursor-pointer hover:opacity-75 transform hover:scale-110 focus:scale-110 transition ease-out duration-150" onclick="function_expand2(this);">
+												</div>
+												<div class="h-full w-auto p-2 ">
+													<img src="projects/images/cnc4.JPG" alt="Tool and chuck with billet close-up" class="object-cover object-center h-full border-gray-200 border-solid border-2 rounded-sm cursor-pointer hover:opacity-75 transform hover:scale-110 focus:scale-110 transition ease-out duration-150" onclick="function_expand2(this);">
+												</div>
+												<div class="h-full w-auto p-2 ">
+													<img src="projects/images/cnc2.png" alt="Pawn piece CAM programming in fusion 360" class="object-cover object-center h-full border-gray-200 border-solid border-2 rounded-sm cursor-pointer hover:opacity-75 transform hover:scale-110 focus:scale-110 transition ease-out duration-150" onclick="function_expand2(this);">
+												</div>
+												<div class="h-full w-auto p-2 ">
+													<img src="projects/images/cnc3.png" alt="Queen piece CAM programming in fusion 360" class="object-cover object-center h-full border-gray-200 border-solid border-2 rounded-sm cursor-pointer hover:opacity-75 transform hover:scale-110 focus:scale-110 transition ease-out duration-150" onclick="function_expand2(this);">
+												</div>
+												<div class="h-full w-auto p-2 ">
+													<img src="projects/images/cnc1.JPG" alt="Chess piece set design" class="object-cover object-center h-full border-gray-200 border-solid border-2 rounded-sm cursor-pointer hover:opacity-75 transform hover:scale-110 focus:scale-110 transition ease-out duration-150" onclick="function_expand2(this);">
+												</div>
+											</div>
+										</div>
+										<div class="flex flex-row justify-center items-center h-4/6 md:p-2">
+											<img class="h-full" src="projects/images/cnc5.JPG" id="expandedImg2">
+										</div>
+										<div class="flex flex-col items-center justify-center h-1/6 p-3">
+											<h4 id="imgtext2">Isometric view of the CAD model</h4>
+											<a href="projects/files/f_cnc2.pdf" target="_blank">
+												<button class="px-8 py-2 m-3 transition ease-out duration-500 hover:bg-red-300 hover:text-white text-red-300 border-red-300 md:border-2 rounded-full uppercase text-xs font-bold cursor-pointer tracking-wider">
+													Open project report</button>
+											</a>
+										</div>
+									</div>
+									<div class="border-r border-gray-300" style="height: 550px;"></div>
+										<div class="w-2/5 pt-10 pb-32 pl-12 pr-12 h-full">
+											<div class="w-full h-full overflow-auto ">
+												<h1 class="title-font sm:text-xl text-2xl mb-4 font-semibold uppercase text-gray-900">Micro CNC lathe: CAD/CAM design and parameter research
+												</h1>
+												<h2 class="title-font sm:text-2xl text-xl mb-4 font-medium text-gray-900"></h2>
+												<p class="">Designed the CAD model of a CNC lathe in SOLIDWORKS and aided in the calculation of the parameters required to make it capable of turning an aluminium billet into a chess piece. The whole CAD model uses either purchasable or easily machinable/printable parts, with the objective of making a possible physical production as straightforward as possible. CAD model of each chess piece was also modelled and using Autodesk Fusion 360 a G-code program was produced to facilitate their machining.</p>
+											</div>
+											<div class="">
+												<h4 class="pb-2">Developed skills:</h4>
+												<div data-tooltip-target="tooltip-CNC2" class="inline-block bg-gray-200 text-gray-500 text-xs uppercase font-bold rounded-full p-2 mb-2">
+													CNC
+												</div>
+												<div id="tooltip-CNC2" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+													Computer numerical control
+													<div class="tooltip-arrow" data-popper-arrow></div>
+												</div>
+		
+												<div data-tooltip-target="tooltip-CAM2" class="inline-block bg-gray-200 text-gray-500 text-xs uppercase font-bold rounded-full p-2">
+													CAM
+												</div>
+												<div id="tooltip-CAM2" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+													Computer aided manufacturing
+													<div class="tooltip-arrow" data-popper-arrow></div>
+												</div>
+		
+												<div data-tooltip-target="tooltip-gcode2" class="inline-block bg-gray-200 text-gray-500 text-xs uppercase font-bold rounded-full p-2">
+													G-Code
+												</div>
+												<div id="tooltip-gcode2" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+													G-Code (M-Code)
+													<div class="tooltip-arrow" data-popper-arrow></div>
+												</div>
+		
+												<div data-tooltip-target="tooltip-electronics2" class="inline-block bg-gray-200 text-gray-500 text-xs uppercase font-bold rounded-full p-2">
+													Electronics
+												</div>
+												<div id="tooltip-electronics2" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+													Electronics
+													<div class="tooltip-arrow" data-popper-arrow></div>
+												</div>
+		
+												<div data-tooltip-target="tooltip-mechanics2" class="inline-block bg-gray-200 text-gray-500 text-xs uppercase font-bold rounded-full p-2">
+													Mechanics
+												</div>
+												<div id="tooltip-mechanics2" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+													Mechanics
+													<div class="tooltip-arrow" data-popper-arrow></div>
+												</div>
+		
+												<div data-tooltip-target="tooltip-fusion3602" class="inline-block bg-gray-200 text-gray-500 text-xs uppercase font-bold rounded-full p-2">
+													Fusion360
+												</div>
+												<div id="tooltip-fusion3602" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+													Fusion360
+													<div class="tooltip-arrow" data-popper-arrow></div>
+												</div>
+		
+												<div data-tooltip-target="tooltip-solidworks2" class="inline-block bg-gray-200 text-gray-500 text-xs uppercase font-bold rounded-full p-2">
+													SOLIDWORKS
+												</div>
+												<div id="tooltip-solidworks2" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+													SOLIDWORKS
+													<div class="tooltip-arrow" data-popper-arrow></div>
+												</div>
+		
+												<div data-tooltip-target="tooltip-cad2" class="inline-block bg-gray-200 text-gray-500 text-xs uppercase font-bold rounded-full p-2">
+													CAD
+												</div>
+												<div id="tooltip-cad2" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+													Computer assisted design 
+													<div class="tooltip-arrow" data-popper-arrow></div>
+												</div>
+	
+												<div data-tooltip-target="tooltip-manufacture2" class="inline-block bg-gray-200 text-gray-500 text-xs uppercase font-bold rounded-full p-2">
+													Manufacture
+												</div>
+												<div id="tooltip-manufacture2" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+													Manufacture technologies
+													<div class="tooltip-arrow" data-popper-arrow></div>
+												</div>
+	
+												<div data-tooltip-target="tooltip-materials2" class="inline-block bg-gray-200 text-gray-500 text-xs uppercase font-bold rounded-full p-2">
+													Materials
+												</div>
+												<div id="tooltip-materials2" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+													Material technologies
+													<div class="tooltip-arrow" data-popper-arrow></div>
+												</div>
+	
+											</div>
+										</div>
+								</div>
+								</div>
+						</div>
+	
+						<!--card 3-->
+						<div class="card cursor-pointer" onclick="function_open3()">
+							<img src="projects/images/dcab7.PNG" class="w-full h-32 sm:h-48 object-cover">
+							<div class="m-4">
+								<span class="font-bold text-xl">Digital vehicle dashboard prototype </span>
+								<span class="block text-gray-500 text-sm tracking-wide">for driver cabin using CAN bus</span>
+							</div>
+						</div>
+	
+						<!--modal 3-->
+						<div class="fixed z-10 hidden inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full p-3 md:p-14" id="modal3">
+								<div class="text-gray-600 body-font bg-white h-full rounded-md shadow-md">
+	
+									<div class="absolute top-16 right-16">
+										<button onclick="function_close3()" class="transition ease-out duration-500 hover:bg-red-300 hover:text-white text-red-300 border-red-300 md:border-2 rounded-full py-2 px-3 uppercase text-xs font-bold cursor-pointer tracking-wider" >x</button>
+									</div>
+	
+									<div class="flex md:flex-row flex-col items-center h-full">
+										<div class="flex flex-col h-full w-3/5 p-5">
+										<div class="h-1/6">
+											<div class="flex flex-row items-center justify-center h-full place-content-end gap-0">
+												<div class="h-full w-auto p-2 ">
+													<img src="projects/images/dcab7.PNG" alt="Dashboard Graphic Interface emulated using Android Studio" class="object-cover object-center h-full border-gray-200 border-solid border-2 rounded-sm cursor-pointer hover:opacity-75 transform hover:scale-110 focus:scale-110 transition ease-out duration-150" onclick="function_expand3(this);">
+												</div>
+												<div class="h-full w-auto p-2 ">
+													<img src="projects/images/dcab6.png" alt="Prototype implementation diagram" class="object-cover object-center h-full border-gray-200 border-solid border-2 rounded-sm cursor-pointer hover:opacity-75 transform hover:scale-110 focus:scale-110 transition ease-out duration-150"onclick="function_expand3(this);">
+												</div>
+												<div class="h-full w-auto p-2 ">
+													<img src="projects/images/dcab5.png" alt="Tentative final implementation diagram" class="object-cover object-center h-full border-gray-200 border-solid border-2 rounded-sm cursor-pointer hover:opacity-75 transform hover:scale-110 focus:scale-110 transition ease-out duration-150" onclick="function_expand3(this);">
+												</div>
+												<div class="h-full w-auto p-2 ">
+													<img src="projects/images/dcab3.jpg" alt="Photo of CAN network circuit" class="object-cover object-center h-full border-gray-200 border-solid border-2 rounded-sm cursor-pointer hover:opacity-75 transform hover:scale-110 focus:scale-110 transition ease-out duration-150" onclick="function_expand3(this);">
+												</div>
+												<div class="h-full w-auto p-2 ">
+													<img src="projects/images/dcab4.JPG" alt="Circuit schematic" class="object-cover object-center h-full border-gray-200 border-solid border-2 rounded-sm cursor-pointer hover:opacity-75 transform hover:scale-110 focus:scale-110 transition ease-out duration-150" onclick="function_expand3(this);">
+												</div>
+												<div class="h-full w-auto p-2 ">
+													<img src="projects/images/dcab2.jpg" alt="Python script for reading/writing CAN signals running in Raspberry Pi" class="object-cover object-center h-full border-gray-200 border-solid border-2 rounded-sm cursor-pointer hover:opacity-75 transform hover:scale-110 focus:scale-110 transition ease-out duration-150" onclick="function_expand3(this);">
+												</div>
+											</div>
+										</div>
+										<div class="flex flex-row justify-center items-center h-4/6 md:p-2">
+											<img class="h-full" src="projects/images/dcab7.PNG" id="expandedImg3">
+										</div>
+										<div class="flex flex-col items-center justify-center h-1/6 p-3">
+											<h4 id="imgtext3">Dashboard Graphic Interface emulated using Android Studio</h4>
+											<a href="projects/files/f_burr4.pdf" target="_blank">
+												<button class="px-8 py-2 m-3 transition ease-out duration-500 hover:bg-red-300 hover:text-white text-red-300 border-red-300 md:border-2 rounded-full uppercase text-xs font-bold cursor-pointer tracking-wider">
+													Open project report</button>
+											</a>
+										</div>
+									</div>
+									<div class="border-r border-gray-300" style="height: 550px;"></div>
+										<div class="w-2/5 pt-10 pb-32 pl-12 pr-12 h-full">
+											<div class="w-full h-full overflow-auto ">
+												<h1 class="title-font sm:text-xl text-2xl mb-4 font-semibold uppercase text-gray-900">Digital vehicle dashboard prototype for driver cabin using CAN bus
+												</h1>
+												<h2 class="title-font sm:text-2xl text-xl mb-4 font-medium text-gray-900"></h2>
+												<p class="">Developed a circuit that simulates communication between a vehicle and the system through a real CAN network and aided in the design of an Android Automotive OS based interface capable of displaying received information on a basic GUI. The circuit was built using an Arduino UNO running a simple program to emulate a vehicle ECU sending messages, two CAN controllers, and a Raspberry Pi functioning as the brain of the operation. The graphic user interface was developed in Android Studio as an android application. Communication between simulated ECU and RPi was achieved, and custom messages could be received and decoded correctly.</p>
+											</div>
+											<div class="">
+												<h4 class="pb-2">Developed skills:</h4>
+												<div data-tooltip-target="tooltip-rpi3" class="inline-block bg-gray-200 text-gray-500 text-xs uppercase font-bold rounded-full p-2 mb-2">
+													RPi
+												</div>
+												<div id="tooltip-rpi3" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+													Raspberry Pi
+													<div class="tooltip-arrow" data-popper-arrow></div>
+												</div>
+		
+												<div data-tooltip-target="tooltip-arduino3" class="inline-block bg-gray-200 text-gray-500 text-xs uppercase font-bold rounded-full p-2">
+													Arduino
+												</div>
+												<div id="tooltip-arduino3" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+													Arduino
+													<div class="tooltip-arrow" data-popper-arrow></div>
+												</div>
+		
+												<div data-tooltip-target="tooltip-android3" class="inline-block bg-gray-200 text-gray-500 text-xs uppercase font-bold rounded-full p-2">
+													Android
+												</div>
+												<div id="tooltip-android3" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+													Android
+													<div class="tooltip-arrow" data-popper-arrow></div>
+												</div>
+	
+												<div data-tooltip-target="tooltip-can3" class="inline-block bg-gray-200 text-gray-500 text-xs uppercase font-bold rounded-full p-2">
+													CAN
+												</div>
+												<div id="tooltip-can3" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+													CAN Bus protocol
+													<div class="tooltip-arrow" data-popper-arrow></div>
+												</div>
+		
+												<div data-tooltip-target="tooltip-linux3" class="inline-block bg-gray-200 text-gray-500 text-xs uppercase font-bold rounded-full p-2">
+													Linux/Raspbian
+												</div>
+												<div id="tooltip-linux3" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+													Linux/Raspbian
+													<div class="tooltip-arrow" data-popper-arrow></div>
+												</div>
+		
+												<div data-tooltip-target="tooltip-c3" class="inline-block bg-gray-200 text-gray-500 text-xs uppercase font-bold rounded-full p-2">
+													C/C++
+												</div>
+												<div id="tooltip-c3" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+													C/C++
+													<div class="tooltip-arrow" data-popper-arrow></div>
+												</div>
+		
+												<div data-tooltip-target="tooltip-python3" class="inline-block bg-gray-200 text-gray-500 text-xs uppercase font-bold rounded-full p-2">
+													Python
+												</div>
+												<div id="tooltip-python3" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+													Python
+													<div class="tooltip-arrow" data-popper-arrow></div>
+												</div>
+		
+												<div data-tooltip-target="tooltip-electronics3" class="inline-block bg-gray-200 text-gray-500 text-xs uppercase font-bold rounded-full p-2">
+													Electronics
+												</div>
+												<div id="tooltip-electronics3" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+													Electronics
+													<div class="tooltip-arrow" data-popper-arrow></div>
+												</div>
+		
+											</div>
+										</div>
+								</div>
+								</div>
+						</div>
+	
+						<!--card 4-->
+						<div class="card cursor-pointer" onclick="function_open4()">
+							<img src="projects/images/rubik2.JPG" class="w-full h-32 sm:h-48 object-cover">
+							<div class="m-4">
+								<span class="font-bold text-xl">Automatic Rubik's cube solver </span>
+								<span class="block text-gray-500 text-sm tracking-wide">CAD model and software</span>
+							</div>
+						</div>
+	
+						<!--modal 4-->
+						<div class="fixed z-10 hidden inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full p-3 md:p-14" id="modal4">
+								<div class="text-gray-600 body-font bg-white h-full rounded-md shadow-md">
+	
+									<div class="absolute top-16 right-16">
+										<button onclick="function_close4()" class="transition ease-out duration-500 hover:bg-red-300 hover:text-white text-red-300 border-red-300 md:border-2 rounded-full py-2 px-3 uppercase text-xs font-bold cursor-pointer tracking-wider" >x</button>
+									</div>
+	
+									<div class="flex md:flex-row flex-col items-center h-full">
+										<div class="flex flex-col h-full w-3/5 p-5">
+										<div class="h-1/6">
+											<div class="flex flex-row items-center justify-center h-full place-content-end gap-0">
+												<div class="h-full w-auto p-2 ">
+													<img src="projects/images/rubik2.JPG" alt="Side view of CAD model" class="object-cover object-center h-full border-gray-200 border-solid border-2 rounded-sm cursor-pointer hover:opacity-75 transform hover:scale-110 focus:scale-110 transition ease-out duration-150" onclick="function_expand4(this);">
+												</div>
+												<div class="h-full w-auto p-2 ">
+													<img src="projects/images/rubik3.JPG" alt="Top view of CAD model" class="object-cover object-center h-full border-gray-200 border-solid border-2 rounded-sm cursor-pointer hover:opacity-75 transform hover:scale-110 focus:scale-110 transition ease-out duration-150"onclick="function_expand4(this);">
+												</div>
+												<div class="h-full w-auto p-2 ">
+													<img src="projects/images/rubik1.JPG" alt="Exploded view of CAD model" class="object-cover object-center h-full border-gray-200 border-solid border-2 rounded-sm cursor-pointer hover:opacity-75 transform hover:scale-110 focus:scale-110 transition ease-out duration-150" onclick="function_expand4(this);">
+												</div>
+												<div class="h-full w-auto p-2 ">
+													<img src="projects/images/rubik4.PNG" alt="Fragment of the developed code (python)" class="object-cover object-center h-full border-gray-200 border-solid border-2 rounded-sm cursor-pointer hover:opacity-75 transform hover:scale-110 focus:scale-110 transition ease-out duration-150" onclick="function_expand4(this);">
+												</div>
+												<div class="h-full w-auto p-2 ">
+													<img src="projects/videos/v_rubik2.gif" alt="Cube face color scanning and processing" class="object-cover object-center h-full border-gray-200 border-solid border-2 rounded-sm cursor-pointer hover:opacity-75 transform hover:scale-110 focus:scale-110 transition ease-out duration-150" onclick="function_expand4(this);">
+												</div>
+											</div>
+										</div>
+										<div class="flex flex-row justify-center items-center h-4/6 md:p-2">
+											<img class="h-full" src="projects/images/rubik2.JPG" id="expandedImg4">
+										</div>
+										<div class="flex flex-col items-center justify-center h-1/6 p-3">
+											<h4 id="imgtext4">Side view of CAD model</h4>
+											<a href="projects/files/f_burr4.pdf" target="_blank">
+												<button class="px-8 py-2 m-3 transition ease-out duration-500 hover:bg-red-300 hover:text-white text-red-300 border-red-300 md:border-2 rounded-full uppercase text-xs font-bold cursor-pointer tracking-wider">
+													Open project report</button>
+											</a>
+										</div>
+									</div>
+									<div class="border-r border-gray-300" style="height: 550px;"></div>
+										<div class="w-2/5 pt-10 pb-32 pl-12 pr-12 h-full">
+											<div class="w-full h-full overflow-auto ">
+												<h1 class="title-font sm:text-xl text-2xl mb-4 font-semibold uppercase text-gray-900">Automatic Rubik's cube solver: CAD model and software
+												</h1>
+												<h2 class="title-font sm:text-2xl text-xl mb-4 font-medium text-gray-900"></h2>
+												<p class=""> Developed a robot capable of solving a Rubik's cube. The CAD design of the robot was built using SOLIDWORKS and the image processing algorithm was created in python. Using a webcam, OpenCV, and other libraries, images of each of the faces of the cube were captured and analysed. The algorithm was programmed to create arrays containing the color combinations of each face. These were then fed into a Kociemba algorithm, which returns a string with the necessary steps to solve the cube. Each step was then interpreted by a program in an Arduino Uno, which in turn sent to the step-motor drivers the required signals to twist and solve the cube. Due to pandemic limitations, a physical prototype could not be built, but all developments on this project were graded on the basis of an actual and eventual physical implementation.</p>
+											</div>
+											<div class="">
+												<h4 class="pb-2">Developed skills:</h4>
+												<div data-tooltip-target="tooltip-python4" class="inline-block bg-gray-200 text-gray-500 text-xs uppercase font-bold rounded-full p-2 mb-2">
+													Python
+												</div>
+												<div id="tooltip-python4" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+													Python
+													<div class="tooltip-arrow" data-popper-arrow></div>
+												</div>
+		
+												<div data-tooltip-target="tooltip-solidworks4" class="inline-block bg-gray-200 text-gray-500 text-xs uppercase font-bold rounded-full p-2">
+													SOLIDWORKS
+												</div>
+												<div id="tooltip-solidworks4" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+													SOLIDWORKS
+													<div class="tooltip-arrow" data-popper-arrow></div>
+												</div>
+		
+												<div data-tooltip-target="tooltip-open4" class="inline-block bg-gray-200 text-gray-500 text-xs uppercase font-bold rounded-full p-2">
+													OpenCV
+												</div>
+												<div id="tooltip-open4" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+													OpenCV
+													<div class="tooltip-arrow" data-popper-arrow></div>
+												</div>
+		
+												<div data-tooltip-target="tooltip-cv4" class="inline-block bg-gray-200 text-gray-500 text-xs uppercase font-bold rounded-full p-2">
+													C.V
+												</div>
+												<div id="tooltip-cv4" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+													Computer Vision
+													<div class="tooltip-arrow" data-popper-arrow></div>
+												</div>
+		
+												<div data-tooltip-target="tooltip-ip4" class="inline-block bg-gray-200 text-gray-500 text-xs uppercase font-bold rounded-full p-2">
+													I.P
+												</div>
+												<div id="tooltip-ip4" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+													Image Processing
+													<div class="tooltip-arrow" data-popper-arrow></div>
+												</div>
+		
+												<div data-tooltip-target="tooltip-electronics4" class="inline-block bg-gray-200 text-gray-500 text-xs uppercase font-bold rounded-full p-2">
+													Electronics
+												</div>
+												<div id="tooltip-electronics4" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+													Electronics
+													<div class="tooltip-arrow" data-popper-arrow></div>
+												</div>
+		
+												<div data-tooltip-target="tooltip-arduino4" class="inline-block bg-gray-200 text-gray-500 text-xs uppercase font-bold rounded-full p-2">
+													Arduino
+												</div>
+												<div id="tooltip-arduino4" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+													Arduino
+													<div class="tooltip-arrow" data-popper-arrow></div>
+												</div>
+		
+												<div data-tooltip-target="tooltip-c4" class="inline-block bg-gray-200 text-gray-500 text-xs uppercase font-bold rounded-full p-2">
+													C/C++
+												</div>
+												<div id="tooltip-c4" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+													C/C++
+													<div class="tooltip-arrow" data-popper-arrow></div>
+												</div>
+	
+												<div data-tooltip-target="tooltip-cad4" class="inline-block bg-gray-200 text-gray-500 text-xs uppercase font-bold rounded-full p-2">
+													CAD
+												</div>
+												<div id="tooltip-cad4" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+													Computer assisted design
+													<div class="tooltip-arrow" data-popper-arrow></div>
+												</div>
+	
+												<div data-tooltip-target="tooltip-mechanics4" class="inline-block bg-gray-200 text-gray-500 text-xs uppercase font-bold rounded-full p-2">
+													Mechanics
+												</div>
+												<div id="tooltip-mechanics4" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+													Mechanics
+													<div class="tooltip-arrow" data-popper-arrow></div>
+												</div>
+											</div>
+										</div>
+								</div>
+								</div>
+						</div>
+	
+						<!--card 5-->
+						<div class="card cursor-pointer" onclick="function_open5()">
+							<img src="projects/images/hand2.jpg" class="w-full h-32 sm:h-48 object-cover">
+							<div class="m-4">
+								<span class="font-bold text-xl">Robotic Hand and 3D sensor</span>
+								<span class="block text-gray-500 text-sm tracking-wide">to mimick user's hand movements</span>
+							</div>
+						</div>
+	
+						<!--modal 5-->
+						<div class="fixed z-10 hidden inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full p-3 md:p-14" id="modal5">
+								<div class="text-gray-600 body-font bg-white h-full rounded-md shadow-md">
+	
+									<div class="absolute top-16 right-16">
+										<button onclick="function_close5()" class="transition ease-out duration-500 hover:bg-red-300 hover:text-white text-red-300 border-red-300 md:border-2 rounded-full py-2 px-3 uppercase text-xs font-bold cursor-pointer tracking-wider" >x</button>
+									</div>
+	
+									<div class="flex md:flex-row flex-col items-center h-full">
+										<div class="flex flex-col h-full w-3/5 p-5">
+										<div class="h-1/6">
+											<div class="flex flex-row items-center justify-center h-full place-content-end gap-0">
+												<div class="h-full w-auto p-2 ">
+													<img src="projects/images/hand2.jpg" alt="3D printed hand with mechanism and circuit" class="object-cover object-center h-full border-gray-200 border-solid border-2 rounded-sm cursor-pointer hover:opacity-75 transform hover:scale-110 focus:scale-110 transition ease-out duration-150" onclick="function_expand5(this);">
+												</div>
+												<div class="h-full w-auto p-2 ">
+													<img src="projects/images/hand1.png" alt="Diagram showing the components used and their connections" class="object-cover object-center h-full border-gray-200 border-solid border-2 rounded-sm cursor-pointer hover:opacity-75 transform hover:scale-110 focus:scale-110 transition ease-out duration-150"onclick="function_expand5(this);">
+												</div>
+												<div class="h-full w-auto p-2 ">
+													<img src="projects/videos/v_hand4.gif" alt="Robot mimicking hand movements" class="object-cover object-center h-full border-gray-200 border-solid border-2 rounded-sm cursor-pointer hover:opacity-75 transform hover:scale-110 focus:scale-110 transition ease-out duration-150" onclick="function_expand5(this);">
+												</div>
+											</div>
+										</div>
+										<div class="flex flex-row justify-center items-center h-4/6 md:p-2">
+											<img class="h-full" src="projects/images/hand2.jpg" id="expandedImg5">
+										</div>
+										<div class="flex flex-col items-center justify-center h-1/6 p-3">
+											<h4 id="imgtext5">3D printed hand with mechanism and circuit</h4>
+											<a href="projects/files/f_burr4.pdf" target="_blank">
+												<button class="px-8 py-2 m-3 transition ease-out duration-500 hover:bg-red-300 hover:text-white text-red-300 border-red-300 md:border-2 rounded-full uppercase text-xs font-bold cursor-pointer tracking-wider">
+													Open project report</button>
+											</a>
+										</div>
+									</div>
+									<div class="border-r border-gray-300" style="height: 550px;"></div>
+										<div class="w-2/5 pt-10 pb-32 pl-12 pr-12 h-full">
+											<div class="w-full h-full overflow-auto ">
+												<h1 class="title-font sm:text-xl text-2xl mb-4 font-semibold uppercase text-gray-900">Robotic Hand and 3D sensor to mimick user's hand movements
+												</h1>
+												<h2 class="title-font sm:text-2xl text-xl mb-4 font-medium text-gray-900"></h2>
+												<p class=""> Built an articulated robotic hand that mimics the movement of a user's hand using a precision 3D (Leap Motion sensor). The sensor could be placed in front of the user, detecting each movement of the user's hands, and generating information in real time about the position of each joint. This information was fed into a control system (Python and ESP8266) which manipulated the motors of the robotic arm. The prototype could copy and display basic signs, moving each finger individually and forming intermediate positions depending on the actual position of the user's fingers.</p>
+											</div>
+											<div class="">
+												<h4 class="pb-2">Developed skills:</h4>
+												<div data-tooltip-target="tooltip-python5" class="inline-block bg-gray-200 text-gray-500 text-xs uppercase font-bold rounded-full p-2 mb-2">
+													Python
+												</div>
+												<div id="tooltip-python5" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+													Python
+													<div class="tooltip-arrow" data-popper-arrow></div>
+												</div>
+	
+												<div data-tooltip-target="tooltip-control5" class="inline-block bg-gray-200 text-gray-500 text-xs uppercase font-bold rounded-full p-2">
+													Control
+												</div>
+												<div id="tooltip-control5" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+													Control
+													<div class="tooltip-arrow" data-popper-arrow></div>
+												</div>
+		
+												<div data-tooltip-target="tooltip-esp5" class="inline-block bg-gray-200 text-gray-500 text-xs uppercase font-bold rounded-full p-2">
+													ESP8266
+												</div>
+												<div id="tooltip-esp5" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+													ESP8266
+													<div class="tooltip-arrow" data-popper-arrow></div>
+												</div>
+		
+												<div data-tooltip-target="c5" class="inline-block bg-gray-200 text-gray-500 text-xs uppercase font-bold rounded-full p-2">
+													C/C++
+												</div>
+												<div id="c5" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+													C/C++
+													<div class="tooltip-arrow" data-popper-arrow></div>
+												</div>
+		
+												<div data-tooltip-target="electronics5" class="inline-block bg-gray-200 text-gray-500 text-xs uppercase font-bold rounded-full p-2">
+													Electronics
+												</div>
+												<div id="electronics5" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+													Electronics
+													<div class="tooltip-arrow" data-popper-arrow></div>
+												</div>
+		
+												<div data-tooltip-target="tooltip-leap5" class="inline-block bg-gray-200 text-gray-500 text-xs uppercase font-bold rounded-full p-2">
+													Leap
+												</div>
+												<div id="tooltip-leap5" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+													Leap motion sensor
+													<div class="tooltip-arrow" data-popper-arrow></div>
+												</div>
+		
+												<div data-tooltip-target="tooltip-sc5" class="inline-block bg-gray-200 text-gray-500 text-xs uppercase font-bold rounded-full p-2">
+													S.C
+												</div>
+												<div id="tooltip-sc5" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+													Serial communication
+													<div class="tooltip-arrow" data-popper-arrow></div>
+												</div>
+		
+												<div data-tooltip-target="tooltip-mechanics5" class="inline-block bg-gray-200 text-gray-500 text-xs uppercase font-bold rounded-full p-2">
+													Mechanics
+												</div>
+												<div id="tooltip-mechanics5" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+													Mechanics 
+													<div class="tooltip-arrow" data-popper-arrow></div>
+												</div>
+											</div>
+										</div>
+								</div>
+								</div>
+						</div>
+	
+						<!--card 6-->
+						<div class="card cursor-pointer" onclick="function_open6()">
+							<img src="projects/images/plc1.JPG" class="w-full h-32 sm:h-48 object-cover">
+							<div class="m-4">
+								<span class="font-bold text-xl">PLC controlled elevator</span>
+								<span class="block text-gray-500 text-sm tracking-wide">programmed with SIMATIC STEP 7</span>
+							</div>
+						</div>
+	
+						<!--modal 6-->
+						<div class="fixed z-10 hidden inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full p-3 md:p-14" id="modal6">
+								<div class="text-gray-600 body-font bg-white h-full rounded-md shadow-md">
+	
+									<div class="absolute top-16 right-16">
+										<button onclick="function_close6()" class="transition ease-out duration-500 hover:bg-red-300 hover:text-white text-red-300 border-red-300 md:border-2 rounded-full py-2 px-3 uppercase text-xs font-bold cursor-pointer tracking-wider" >x</button>
+									</div>
+	
+									<div class="flex md:flex-row flex-col items-center h-full">
+										<div class="flex flex-col h-full w-3/5 p-5">
+										<div class="h-1/6">
+											<div class="flex flex-row items-center justify-center h-full place-content-end gap-0">
+												<div class="h-full w-auto p-2 ">
+													<img src="projects/images/plc1.JPG" alt="The elevator simulation, consisting of only virtual actuators and sensors, is operated via PLCSIM" class="object-cover object-center h-full border-gray-200 border-solid border-2 rounded-sm cursor-pointer hover:opacity-75 transform hover:scale-110 focus:scale-110 transition ease-out duration-150" onclick="function_expand6(this);">
+												</div>
+												<div class="h-full w-auto p-2 ">
+													<img src="projects/images/plc2.png" alt="Flow diagram of the main elevator actions (Displays and indicators were also controlled)" class="object-cover object-center h-full border-gray-200 border-solid border-2 rounded-sm cursor-pointer hover:opacity-75 transform hover:scale-110 focus:scale-110 transition ease-out duration-150"onclick="function_expand6(this);">
+												</div>
+												<div class="h-full w-auto p-2 ">
+													<img src="projects/images/plc3.png" alt="Fraction of the PLC program, coded using ladder logic" class="object-cover object-center h-full border-gray-200 border-solid border-2 rounded-sm cursor-pointer hover:opacity-75 transform hover:scale-110 focus:scale-110 transition ease-out duration-150" onclick="function_expand6(this);">
+												</div>
+											</div>
+										</div>
+										<div class="flex flex-row justify-center items-center h-4/6 md:p-2">
+											<img class="h-full" src="projects/images/plc1.JPG" id="expandedImg6">
+										</div>
+										<div class="flex flex-col items-center justify-center h-1/6 p-3">
+											<h4 id="imgtext6">The elevator simulation, consisting of only virtual actuators and sensors, is operated via PLCSIM</h4>
+											<a href="projects/files/f_burr4.pdf" target="_blank">
+												<button class="px-8 py-2 m-3 transition ease-out duration-500 hover:bg-red-300 hover:text-white text-red-300 border-red-300 md:border-2 rounded-full uppercase text-xs font-bold cursor-pointer tracking-wider">
+													Open project report</button>
+											</a>
+										</div>
+									</div>
+									<div class="border-r border-gray-300" style="height: 550px;"></div>
+										<div class="w-2/5 pt-10 pb-24 pl-12 pr-12 h-full">
+											<div class="w-full h-full overflow-auto ">
+												<h1 class="title-font sm:text-xl text-2xl mb-4 font-semibold uppercase text-gray-900">PLC controlled elevator programmed with SIMATIC STEP 7
+												</h1>
+												<h2 class="title-font sm:text-2xl text-xl mb-4 font-medium text-gray-900"></h2>
+												<p class="">Programmed a simulated PLC running in Siemen's S7-PLCSIM using TIA Portal to run an also simulated multiple-floor elevator with several functions. The elevator program could perform the most common functions of a real-life elevator, such as attending several floors in an efficient manner, display the current floor of the elevator, slow down the cabin before arriving to the requested floor, prevent motor overexertion at the ends of the shaft and by warning users of weight overload, manage all indicators such as requested floor button light and floor up/down button light, prevent door closing when a user is in the way, and an emergency button that halts all functions and runs a specified routine.</p>
+											</div>
+											<div class="">
+												<h4 class="pb-2">Developed skills:</h4>
+												<div data-tooltip-target="tooltip-plcsim6" class="inline-block bg-gray-200 text-gray-500 text-xs uppercase font-bold rounded-full p-2">
+													S7-PLCSIM
+												</div>
+												<div id="tooltip-plcsim6" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+													SIMATIC S7-PLCSIM
+													<div class="tooltip-arrow" data-popper-arrow></div>
+												</div>
+		
+												<div data-tooltip-target="tooltip-step76" class="inline-block bg-gray-200 text-gray-500 text-xs uppercase font-bold rounded-full p-2">
+													STEP 7
+												</div>
+												<div id="tooltip-step76" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+													SIMATIC STEP 7 (TIA Portal)
+													<div class="tooltip-arrow" data-popper-arrow></div>
+												</div>
+		
+												<div data-tooltip-target="tooltip-ll6" class="inline-block bg-gray-200 text-gray-500 text-xs uppercase font-bold rounded-full p-2">
+													L.L
+												</div>
+												<div id="tooltip-ll6" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+													Ladder logic
+													<div class="tooltip-arrow" data-popper-arrow></div>
+												</div>
+		
+												<div data-tooltip-target="tooltip-hmi6" class="inline-block bg-gray-200 text-gray-500 text-xs uppercase font-bold rounded-full p-2">
+													HMI
+												</div>
+												<div id="tooltip-hmi6" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+													Human-machine interface integration
+													<div class="tooltip-arrow" data-popper-arrow></div>
+												</div>
+		
+												<div data-tooltip-target="tooltip-plc6" class="inline-block bg-gray-200 text-gray-500 text-xs uppercase font-bold rounded-full p-2">
+													PLC
+												</div>
+												<div id="tooltip-plc6" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+													Programmable logic controller
+													<div class="tooltip-arrow" data-popper-arrow></div>
+												</div>
+		
+												<div data-tooltip-target="tooltip-control6" class="inline-block bg-gray-200 text-gray-500 text-xs uppercase font-bold rounded-full p-2">
+													Control
+												</div>
+												<div id="tooltip-control6" class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+													Industrial control
+													<div class="tooltip-arrow" data-popper-arrow></div>
+												</div>
+	
+											</div>
+										</div>
+								</div>
+								</div>
+						</div>
+	
+					</div>
+				</div>
+			</section>
+			
+			<section id="curriculum_section">
+				<header>
+					<h2 class="text-gray-700 text-6xl font-semibold mt-32">Curriculum</h2>
+					<h3 class="text-2xl font-semibold">Feb-2022
+					</h3>
+				</header>
+	
+				<div>
+					<h4 class="font-bold mt-6 pb-2 border-b border-gray-200"></h4>
+					<div>
+						<iframe src="cv/CV. Diego A. Santisteban [EN].pdf" class="w-full mt-8" frameborder="0" height="1320px"></iframe>
+					</div>
+				</div>
+			</section>
+
+		</main>
+	</div>
+	<script src="index.js"></script>
+</body>
+</html>
