@@ -39,6 +39,12 @@ function function_close5(){ document.getElementById("modal5").style.display="non
 function function_open6(){ document.getElementById("modal6").style.display="block"; }
 function function_close6(){ document.getElementById("modal6").style.display="none"; }
 
+function function_open7(){ document.getElementById("modal7").style.display="block"; }
+function function_close7(){ document.getElementById("modal7").style.display="none"; }
+
+function function_open8(){ document.getElementById("modal8").style.display="block"; }
+function function_close8(){ document.getElementById("modal8").style.display="none"; }
+
 function function_expand1(imgs) {
   var expandImg = document.getElementById("expandedImg1");
   var imgText = document.getElementById("imgtext1");
@@ -111,6 +117,30 @@ function function_expand6(imgs) {
   }
 }
 
+function function_expand7(imgs) {
+  var expandImg = document.getElementById("expandedImg7");
+  var imgText = document.getElementById("imgtext7");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  if (menu.classList.contains('visible')){
+    expandImg.classList.remove('visible');
+  } else{
+    expandImg.classList.add('visible');
+  }
+}
+
+function function_expand8(imgs) {
+  var expandImg = document.getElementById("expandedImg8");
+  var imgText = document.getElementById("imgtext8");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  if (menu.classList.contains('visible')){
+    expandImg.classList.remove('visible');
+  } else{
+    expandImg.classList.add('visible');
+  }
+}
+
 const sections = document.querySelectorAll('section');
 /* const navLi = document.querySelectorAll('nav .container ul li') */
 const navLi = document.querySelectorAll('nav .container ul li a');
@@ -121,7 +151,10 @@ window.addEventListener('scroll', ()=> {
   sections.forEach( section => {
     const sectionTop = section.offsetTop;
     const sectionHeight = section.clientHeight;
-    if(scrollY >= (sectionTop-sectionHeight / 3)){
+    console.log(sectionTop)
+    console.log(sectionHeight)
+    console.log(scrollY)
+    if(scrollY >= (sectionTop-(sectionHeight+60) / 3)){
       current = section.getAttribute('id');
     }
   })
@@ -144,3 +177,13 @@ window.addEventListener('scroll', ()=> {
 	})
 
 })
+
+function function_tcv(tcv) {
+  var currentCV = document.getElementById("cvframe");
+  currentCV.src = tcv.getAttribute('id');
+  if (menu.classList.contains('visible')){
+    currentCV.classList.remove('visible');
+  } else{
+    currentCV.classList.add('visible');
+  }
+}
